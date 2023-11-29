@@ -1,0 +1,22 @@
+apiVersion: v1
+entries:
+  kaholo-kubernetes-agents-controller:
+  - apiVersion: v2
+    created: "2023-11-29T15:57:16.847034623+01:00"
+    description: A Helm chart for Kaholo Kubernetes Agents Controller
+    digest: c0a5458225dfdcbb39db5541e9e95b53622882e65ea83d65d3acd3795bd213ec
+    keywords:
+    - kaholo
+    - controller
+    - automation
+    - agents
+    maintainers:
+    - name: tomjohntaylor
+    - name: kbuchacz
+    - name: kadosh1000
+    name: kaholo-kubernetes-agents-controller
+    type: application
+    urls:
+    - kaholo-kubernetes-agents-controller-1.0.0.tgz
+    version: 1.0.0
+generated: "2023-11-29T15:57:16.846453359+01:00"
