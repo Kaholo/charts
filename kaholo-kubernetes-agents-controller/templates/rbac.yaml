@@ -1,0 +1,38 @@
+apiVersion: v1
+kind: List
+metadata:
+  name: rbac-resources
+items:
+
+- apiVersion: rbac.authorization.k8s.io/v1
+  kind: Role
+  metadata:
+    namespace: {{ include "controller.namespace" . | quote }}
+    name: deployment-manager-role
+  rules:
+  - apiGroups: [""]
+    resources: ["pods"]
+    verbs: ["get", "list", "watch", "create", "update", "patch", "delete"]
+  - apiGroups: [""]
+    resources: ["secrets"]
+    verbs: ["get", "list", "watch", "create", "update", "patch", "delete"]
+
+- apiVersion: v1
+  kind: ServiceAccount
+  metadata:
+    name: kubernetes-agents-controller-sa
+    namespace: {{ include "controller.namespace" . | quote }}
+
+- apiVersion: rbac.authorization.k8s.io/v1
+  kind: RoleBinding
+  metadata:
+    namespace: {{ include "controller.namespace" . | quote }}
+    name: deployment-manager-binding
+  subjects:
+  - kind: ServiceAccount
+    name: kubernetes-agents-controller-sa
+    namespace: {{ include "controller.namespace" . | quote }}
+  roleRef:
+    kind: Role
+    name: deployment-manager-role
+    apiGroup: rbac.authorization.k8s.io

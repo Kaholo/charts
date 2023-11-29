@@ -1,0 +1,14 @@
+apiVersion: v2
+name: kaholo-kubernetes-agents-controller
+version: 1.0.0
+description: A Helm chart for Kaholo Kubernetes Agents Controller
+type: application
+keywords:
+- kaholo
+- controller
+- automation
+- agents
+maintainers:
+- name: tomjohntaylor
+- name: kbuchacz
+- name: kadosh1000

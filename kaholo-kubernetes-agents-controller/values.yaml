@@ -1,0 +1,13 @@
+global:
+  namespaceOverride: ""
+connection:
+  kaholoUrl: https://mycompany.kaholo.net
+  # Required only for the initial setup
+  registrationToken: token-123asd
+controller:
+  image: matankaholo/kubernetes-agents-controller:v6.4.0
+  # add your own custom agent images to be selectable
+  additionalAgentImages: 
+  - kaholo-agent:6.2.0
+  clusterKey: k8s-agents-cluster
+  clusterName: k8s-agents-cluster
