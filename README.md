@@ -15,7 +15,7 @@ After that commit changes and make them available in main branch.
 
 ## Adding this repo to helm
 ```
-helm repo add kaholo-devops 'https://raw.githubusercontent.com/kaholo/devops/main/charts/' --username xxx --password xxx
+helm repo add kaholo 'https://raw.githubusercontent.com/kaholo/charts/main'
 helm repo update
 
 ```
